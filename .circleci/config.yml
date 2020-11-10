@@ -83,5 +83,6 @@ jobs:
 workflows:
   node-tests:
     jobs:
+      - linting
       - package-test
       - build-test
