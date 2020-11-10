@@ -57,8 +57,5 @@ jobs:
 workflows:
   node-tests:
     jobs:
-      - package-test:
-        type: approval
-      - build-test:
-        requires:
-          -package-test
+      - package-test
+      - build-test
