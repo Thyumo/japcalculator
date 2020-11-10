@@ -26,8 +26,13 @@ jobs:
       # run tests!
       - run: yarn test
       - run: yarn build
+  linting:
+    - steps:
+        - yarn i eslint
+        - node_modules/eslint/bin/eslint.js
 
 workflows:
   node-tests:
     jobs:
+      - linting
       - build-test
