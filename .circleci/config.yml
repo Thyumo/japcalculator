@@ -27,7 +27,7 @@ jobs:
       - run: yarn test
       - run: yarn build
 
-  packge-test:
+  package-test:
     docker:
       # specify the version you desire here
       - image: circleci/node:12
